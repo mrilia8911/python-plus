@@ -28,14 +28,15 @@ self_checkout = "notdefined"
 for password in range(2):
     while password_1 != password_2:
         print("wrong password")
-        password_2 = input("try again")
+        print("try again")
+        password_2 = input("plz enter your password")
 print ("your password is accepted")
 
 while self_checkout != "done":
     if switch == 0:
-        self_checkout = input("dear customer enter your bread: ")
+        self_checkout = input(f"{name} enter your bread: ")
     else:
-        self_checkout = input("please enter your next item")
+        self_checkout = input("please enter your next bread")
     while self_checkout not in dict(breads):
         if self_checkout == "done":
             break
@@ -66,8 +67,8 @@ while self_checkout != "done":
 
     total = total_1 + total_2 + total_3 + total_4 + total_5
 
-    print ("your item had been enterd")
+    print ("your bread had been enterd")
     switch=1
 
-print (f"so your total is {total}")
+print (f"so your bill is {total}")
 #the end
